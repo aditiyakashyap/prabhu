@@ -3,54 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prabhu Naval - Professional Profile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Prabhu Naval | B2B Marketing Specialist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root { --bg-dark: #0f172a; --glass-bg: rgba(30, 41, 59, 0.7); --glass-border: rgba(255, 255, 255, 0.1); --accent: #d4af37; --accent-secondary: #3b82f6; --text-main: #f8fafc; --text-muted: #94a3b8; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Outfit', sans-serif; background-color: var(--bg-dark); background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(212, 175, 55, 0.1) 0px, transparent 50%); color: var(--text-main); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
-        .profile-card { width: 100%; max-width: 450px; background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); border-radius: 30px; padding: 40px 30px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); animation: slideUp 0.8s ease-out forwards; position: relative; overflow: hidden; }
-        .profile-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 60%); transform: rotate(45deg); pointer-events: none; }
-        .img-container { width: 140px; height: 140px; margin: 0 auto 25px; position: relative; }
-        .profile-pic { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); padding: 4px; background: var(--bg-dark); }
-        .name { font-size: 2rem; font-weight: 700; margin-bottom: 5px; background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .role { font-size: 1rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 20px; }
-        .details-grid { display: grid; gap: 15px; text-align: left; margin-bottom: 30px; background: rgba(0,0,0,0.2); padding: 20px; border-radius: 15px; }
-        .detail-item { display: flex; align-items: center; gap: 15px; font-size: 0.95rem; color: var(--text-muted); }
-        .detail-item i { width: 20px; color: var(--text-main); text-align: center; }
-        .education-badge { display: inline-block; background: rgba(212, 175, 55, 0.1); color: var(--accent); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; margin-top: 5px; border: 1px solid rgba(212, 175, 55, 0.2); }
-        .action-buttons { display: flex; gap: 15px; justify-content: center; }
-        .btn { flex: 1; padding: 15px; border-radius: 15px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px; }
-        .btn-primary { background: var(--text-main); color: var(--bg-dark); }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,255,255,0.2); }
-        .btn-secondary { background: rgba(255,255,255,0.05); color: var(--text-main); border: 1px solid rgba(255,255,255,0.1); }
-        .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: var(--text-main); }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    </style>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="profile-card">
-        <div class="img-container">
-            <img src="./images/prabhu.jpg" alt="Prabhu Naval" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Prabhu+Naval&background=D4AF37&color=fff&size=256'">
+<body class="executive-scroll">
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <div class="grid-overlay"></div>
+
+    <nav class="navbar">
+        <div class="logo">PN<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="hover-link">Profile</a></li>
+            <li><a href="#expertise" class="hover-link">Strategy</a></li>
+            <li><a href="#vision" class="hover-link">Vision</a></li>
+            <li><a href="#contact" class="hover-link">Connect</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-        <h1 class="name">Prabhu Naval</h1>
-        <div class="role">Marketing & Sales (B2B)</div>
-        <div class="details-grid">
-            <div class="detail-item"><i class="fas fa-map-marker-alt"></i> <span>Ghaziabad</span></div>
-            <div class="detail-item"><i class="fas fa-briefcase"></i> <span>Thermal Transfer Ribbon Specialist</span></div>
-            <div class="detail-item" style="align-items: flex-start;">
-                <i class="fas fa-graduation-cap" style="margin-top: 5px;"></i>
-                <div>
-                    <span style="display:block; margin-bottom:4px;">Education</span>
-                    <span class="education-badge">MBA in Marketing</span>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="hero-content hidden-element">
+            <h2 class="subtitle">MBA in Marketing | B2B Specialist</h2>
+            <h1 class="glitch-text" data-text="PRABHU NAVAL">PRABHU NAVAL</h1>
+            <p class="description">Thermal Transfer Solutions. Strategic Sales. Market Growth.<br>Driving Business Excellence from Ghaziabad.</p>
+            
+            <div class="cta-group">
+                <a href="#contact" class="cta-btn">Discuss Business</a>
+                
+                <a href="https://www.instagram.com/prabhu_naval18?igsh=MWV2ajZveDE2MnVyaw==" target="_blank" class="insta-btn">
+                    <i class="fab fa-instagram"></i> Prabhu_Naval18
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Market Leadership</span>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <section id="expertise" class="section expertise-section">
+        <div class="container">
+            <div class="section-header hidden-element">
+                <h2 class="silver-text">The Strategist</h2>
+                <div class="separator"></div>
+            </div>
+            
+            <div class="profile-grid">
+                <div class="profile-text hidden-element">
+                    <h3>Mastering B2B Dynamics</h3>
+                    <p>Marketing is not just about selling; it's about solving problems. With an MBA in Marketing and specialized expertise in Thermal Transfer Ribbons, I bridge the gap between complex industrial needs and efficient solutions.</p>
+                    
+                    <div class="expertise-list">
+                        <div class="expertise-item">
+                            <i class="fas fa-handshake"></i>
+                            <div><h4>B2B Sales Strategy</h4><span>Client Acquisition, Relationship Management & Retention</span></div>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-industry"></i>
+                            <div><h4>Product Expertise</h4><span>Thermal Transfer Ribbons & Industrial Printing Solutions</span></div>
+                        </div>
+                         <div class="expertise-item">
+                            <i class="fas fa-bullseye"></i>
+                            <div><h4>Market Analysis</h4><span>Trend Forecasting & Competitive Positioning</span></div>
+                        </div>
+                    </div>
+
+                    <div class="personal-pursuits" style="margin-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+                        <h4 style="color: #e5e4e2; font-family: 'Cinzel', serif; font-size: 0.9rem; margin-bottom: 1rem; letter-spacing: 0.1em;">Competitive Edge</h4>
+                        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                            <div style="display: flex; align-items: center; gap: 10px; color: #c5c6c7;">
+                                <i class="fas fa-futbol" style="color: #e5e4e2;"></i> 
+                                <span style="font-size: 0.9rem;">Football & Cricket</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; color: #c5c6c7;">
+                                <i class="fas fa-gamepad" style="color: #e5e4e2;"></i> 
+                                <span style="font-size: 0.9rem;">Strategic Gaming</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-image hidden-element">
+                    <div class="image-frame">
+                        <img src="prabhu1.png" alt="Prabhu Naval Profile" class="parallax-img">
+                        <div class="corner-border top-left"></div>
+                        <div class="corner-border bottom-right"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="action-buttons">
-            <a href="mailto:prabhu@aurr.co.in" class="btn btn-secondary"><i class="far fa-envelope"></i> Email</a>
-            <a href="tel:7248283773" class="btn btn-primary"><i class="fas fa-phone"></i> Call</a>
+    </section>
+
+    <section id="vision" class="section vision-section" style="background: rgba(255,255,255,0.02);">
+        <div class="container" style="text-align: center; max-width: 800px;">
+             <div class="section-header hidden-element">
+                <h2 class="silver-text">The Philosophy</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="hidden-element">
+                <i class="fas fa-quote-left" style="font-size: 2rem; color: #e5e4e2; margin-bottom: 2rem; opacity: 0.5;"></i>
+                <h3 style="font-family: 'Lato', sans-serif; font-weight: 300; font-size: 1.5rem; line-height: 1.6; color: #f5f6fa;">
+                    "In the competitive arena of B2B sales, success belongs to those who combine strategic foresight with relentless execution. Whether on the field or in the boardroom, teamwork wins."
+                </h3>
+                <br>
+                <p style="color: #c5c6c7; letter-spacing: 0.2em; font-size: 0.9rem;">— PRABHU NAVAL</p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-card hidden-element">
+                <h2>Initiate Collaboration</h2>
+                <p>Open for marketing consultation and product inquiries.</p>
+                
+                <div class="contact-details">
+                    <a href="tel:+917248283773" class="silver-link">
+                        <i class="fas fa-phone-alt"></i> +91 72482 83773
+                    </a>
+                    <a href="mailto:prabhu@aurr.co.in" class="silver-link">
+                        <i class="fas fa-envelope-open-text"></i> prabhu@aurr.co.in
+                    </a>
+                    <a href="https://www.instagram.com/prabhu_naval18?igsh=MWV2ajZveDE2MnVyaw==" target="_blank" class="silver-link" style="font-size: 1rem;">
+                        <i class="fab fa-instagram"></i> Follow on Instagram
+                    </a>
+                    <span class="silver-link" style="font-size: 0.9rem; opacity: 0.7; margin-top: 10px;">
+                        <i class="fas fa-map-marker-alt"></i> Ghaziabad, India
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Prabhu Naval. <span class="silver-text">Aurr Pvt Ltd.</span></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
